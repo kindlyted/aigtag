@@ -2,16 +2,16 @@
   <div class="container">
     <div class="header">
       <span class="mystic-symbol">☯</span>
-      <h1>Mystic Divination Guide</h1>
+      <h1>ANCIENT DIVINATION FINDING SYSTEM</h1>
       <span class="mystic-symbol">🔮</span>
     </div>
     
     <div class="divination-form">
       <div class="form-group">
         <div class="input-group">
-          <label>Choose Your Divination Method</label>
+          <label>SELECT WISDOM TRADITION</label>
           <select v-model="selectedMethod">
-            <option value="">Select a divination method...</option>
+            <option value="">CHOOSE AN ANCIENT SYSTEM</option>
             <option v-for="option in heroOptions" 
                     :key="option.value" 
                     :value="option.value">
@@ -21,7 +21,7 @@
         </div>
         
         <div class="input-group">
-          <label>Upload Image for Analysis</label>
+          <label>VISUAL CLUES (OPTIONAL)</label>
           <div class="file-upload">
             <input 
               ref="fileInput"
@@ -42,13 +42,13 @@
 
       <div class="form-group">
         <div class="input-group">
-          <label>Item Name</label>
-          <input v-model="formData.name" type="text" placeholder="Name of the lost item...">
+          <label>MISSING OBJECT</label>
+          <input v-model="formData.name" type="text" placeholder="E.G. SILVER NECKLACE, BLACK LAPTOP">
         </div>
 
         <div class="input-group">
-          <label>Item Description</label>
-          <input v-model="formData.attribute" type="text" placeholder="Describe the item's features...">
+          <label>UNIQUE IDENTIFIERS</label>
+          <input v-model="formData.attribute" type="text" placeholder="SCRATCHES, ENGRAVINGS, DISTINGUISHING MARKS">
         </div>
 
         <div class="input-group">
@@ -63,7 +63,7 @@
       :disabled="!isFormValid"
       :class="{ 'button-disabled': !isFormValid }"
     >
-      Begin Divination
+      SEEK ANCIENT WISDOM
     </button>
     
     <div class="result" v-html="divinationResult || defaultMessage"></div>
@@ -84,8 +84,8 @@ export default {
         owner: ''
       },
       divinationResult: '',
-      defaultMessage: '<em>The oracle awaits your query...</em>',
-      uploadButtonText: 'Click to Upload Image'
+      defaultMessage: '<em>THE UNIVERSE RESPONDS TO SINCERE INQUIRY</em>',
+      uploadButtonText: 'ADD PHOTOS RELATED TO YOUR LOSS'
     }
   },
   computed: {
